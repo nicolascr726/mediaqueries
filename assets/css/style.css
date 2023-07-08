@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+        "header"
+        "section"
+        "main"
+        "pagination"
+        "footer";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2967a0;
+    height: 70px;
+    color: #fff;
+}
+
+header i {
+    font-size: 25px;
+}
+
+.car-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.car-logo img {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    margin-left: 20px;
+}
+
+.bars {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar {
+    display: none;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+ul li {
+    height: 40px;
+    justify-content: space-between;
+}
+
+section {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgb(163, 163, 163);
+    padding-top: 10px;
+    padding-bottom: 9px;
+}
+
+select {
+    background-color: white;
+    width: 300px;
+    border: solid 1px;
+    border-radius: 5px;
+    font-size: medium;
+    padding: 5px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 30px;
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgb(199, 198, 198);
+}
+
+.card img {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.card h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card button {
+    border-radius: 5px;
+    border-color: #2967a0;
+    color: #fff;
+    background-color: #2967a0;
+    height: 35px;
+    width: 75px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    grid-area: pagination;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: solid 1px;
+    border-radius: 1.5px;
+    color: black;
+}
+
+.footer {
+    background-color: blue;
+    color: #fff;
+    height: 70px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 25px;
+    padding: 7px;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media  screen and (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header section"
+          "header main"
+          "footer pagination";
+    }
+    .header {
+        flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+        height: 100%;
+        padding-top: 25px;
+    }
+    .bars {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    }
+    .navbar ul {
+        list-style: none;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .footer {
+        height: 100%;
+    }
+}
