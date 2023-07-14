@@ -95,7 +95,7 @@ select {
     grid-area: main;
     display: grid;
     grid-template-columns: auto;
-    padding: 30px;
+    padding: 50px;
     gap: 50px;
 }
 
@@ -114,7 +114,15 @@ select {
     justify-content: center;
     align-items: center;
     width: 400px;
-    padding-top: 30px;
+    margin-top: 30px;
+    border: solid 1px;
+    border-radius: 10px;
+    transition-property: filter;
+    transition-duration: 0.6s;
+}
+
+.card img:hover {
+    filter: blur(2px);
 }
 
 .card h3 {
