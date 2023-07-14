@@ -165,6 +165,13 @@ select {
     border: solid 1px;
     border-radius: 1.5px;
     color: black;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.pagination a:hover {
+    background-color: rgb(150, 150, 150);
+    color: #fff;
 }
 
 .footer {
